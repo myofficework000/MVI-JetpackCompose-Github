@@ -34,6 +34,11 @@ The sample app presents a modern Android application Architecture that is scalab
 ## Light and Dark mode
 <img src="misc/demo_light_mode.gif" width="360" height="820"> <img src="misc/demo_dark_mode.gif" width="360" height="820">
 
+| Dark Theme UI                            | Light Theme UI                              |
+|-----------------------------------------|----------------------------------------------|
+| <video src ='https://github.com/myofficework000/MVI-JetpackCompose-Github/assets/51234843/cbcd4ac6-cca1-44ab-a55d-c8095f775ee1' width=200/> | <video src ='https://github.com/myofficework000/MVI-JetpackCompose-Github/assets/51234843/5728e268-be26-44fb-81d0-a27663aea07f' width=200/>
+
+
 ## Architecture
 The project is layered traditionally with a View, Presentation, Model separation and presents a MVI inspired from [Yusuf Ceylan's architecture](https://proandroiddev.com/mvi-architecture-with-kotlin-flows-and-channels-d36820b2028d) but adapted to Compose.
 
