@@ -14,6 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.abhishek.pathak.kotlin.android.githubcompose.data.model.User
 import com.abhishek.pathak.kotlin.android.githubcompose.data.model.buildUserPreview
 import com.abhishek.pathak.kotlin.android.githubcompose.ui.feature.common.RoundedImage
+import com.abhishek.pathak.kotlin.android.githubcompose.R
 
 @Composable
 fun UsersListItem(

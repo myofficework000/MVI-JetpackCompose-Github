@@ -6,4 +6,4 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "android-compose-mvi-navigation"
+rootProject.name = "MVI-JetpackCompose-Github-demo"
