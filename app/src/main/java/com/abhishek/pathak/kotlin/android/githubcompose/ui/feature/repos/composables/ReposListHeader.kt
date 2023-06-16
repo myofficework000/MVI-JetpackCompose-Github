@@ -108,6 +108,7 @@ fun ButtonsSession(userDetail: UserDetail) {
             if (userDetail.blogUrl.isEmpty()) {
                 blogNotFoundDialog.value = true
             } else {
+                //Open a webview - @bitbyAlex
                 context.startActivity(blogIntent)
             }
         }) {
