@@ -14,11 +14,11 @@ data class UserDetail(
 )
 
 fun buildUserDetailPreview() = UserDetail(
-    avatarUrl = "https://avatars.githubusercontent.com/u/24476557?v=4",
-    htmlUrl = "https://github.com/wellingtoncabral",
-    name = "Wellington Cabral da Silva",
-    location = "Brazil",
-    publicRepos = 10,
-    followers = 6,
+    avatarUrl = "https://avatars.githubusercontent.com/myofficework000",
+    htmlUrl = "https://github.com/51234843",
+    name = "Abhishek Pathak",
+    location = "London",
+    publicRepos = 50,
+    followers = 50,
     following = 0
 )
