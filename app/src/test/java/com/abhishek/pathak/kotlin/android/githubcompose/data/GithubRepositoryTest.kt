@@ -35,7 +35,7 @@ class GithubRepositoryTest {
     @Test
     fun `When getUser called then should call getUser from the API`() = runTest {
         // Given
-        val userId = "wcabral"
+        val userId = "51234843"
         coEvery { githubApi.getUser(any()) } returns UserDetail()
 
         // When
@@ -50,7 +50,7 @@ class GithubRepositoryTest {
     @Test
     fun `When getRepos called then should call getRepos from the API`() = runTest {
         // Given
-        val userId = "wcabral"
+        val userId = "51234843"
         coEvery { githubApi.getRepos(userId) } returns listOf(Repo())
 
         // When
@@ -80,7 +80,7 @@ class GithubRepositoryTest {
         coEvery { githubApi.getUser(any()) } throws Exception("")
 
         // When
-        val result = githubRepository.getUser("wcabral")
+        val result = githubRepository.getUser("51234843")
 
         // Then
         assert(result.isFailure)
@@ -92,7 +92,7 @@ class GithubRepositoryTest {
         coEvery { githubApi.getRepos(any()) } throws Exception("")
 
         // When
-        val result = githubRepository.getRepos("wcabral")
+        val result = githubRepository.getRepos("51234843")
 
         // Then
         assert(result.isFailure)

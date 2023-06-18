@@ -41,7 +41,7 @@ class UsersViewModelTest {
     @Test
     fun `When getUsers called then should emit a view state`() = runTest {
         // Given
-        val users = listOf(User(userId = "wcabral"))
+        val users = listOf(User(userId = "51234843"))
         val expectedViewState = UsersContract.State(
             users = users,
             isLoading = false,
@@ -60,7 +60,7 @@ class UsersViewModelTest {
     fun `When `() = runTest {
 
         // Given
-        val users = listOf(User(userId = "wcabral"))
+        val users = listOf(User(userId = "51234843"))
         val expectedViewState = UsersContract.State(
             users = users,
             isLoading = false,
