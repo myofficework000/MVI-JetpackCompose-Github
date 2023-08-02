@@ -40,7 +40,7 @@ The sample app presents a modern Android application Architecture that is scalab
 
 
 ## Architecture
-The project is structured with a well-defined separation of View, Presentation, and Model components, and incorporates the Model-View-Intent (MVI) pattern along with the capabilities of Jetpack Compose
+The project's architecture follows a clear division of responsibilities between its View, Presentation, and Model components, thoughtfully implementing the Model-View-Intent (MVI) pattern in conjunction with the powerful features of Jetpack Compose.
 
 Architecture layers:
 * View - Composable screens that consume state, apply effects and delegate events.
