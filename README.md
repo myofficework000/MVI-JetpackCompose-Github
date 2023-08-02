@@ -2,11 +2,9 @@
 
 ![Language](https://img.shields.io/github/languages/top/cortinico/kotlin-android-template?color=blue&logo=kotlin)
 
-GithubCompose is a sample project that presents a modern approach to Android app development.
+GithubCompose is an exemplary project showcasing a contemporary approach to Android app development. It skillfully merges popular Android tools and exemplifies best development practices by incorporating cutting-edge technologies such as Compose, Kotlin Flow, and Koin.
 
-The project tries to combine popular Android tools and to demonstrate best development practices by utilizing up to date tech-stack like Compose, Kotlin Flow and Koin.
-
-The sample app presents a modern Android application Architecture that is scalable and maintainable through a MVI.
+The sample app presents a modern Android application architecture, emphasizing scalability and maintainability through the implementation of MVI (Model-View-Intent).
 
 ## Description
 
