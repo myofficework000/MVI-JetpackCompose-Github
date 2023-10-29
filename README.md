@@ -42,7 +42,7 @@ The project's architecture follows a clear division of responsibilities between 
 
 Architecture layers:
 * View - Composable screens that consume state, apply effects and delegate events.
-* ViewModel - [AAC ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) that manages and reduces the state of the corresponding screen. Additionally, it intercepts UI events and produces side-effects. The ViewModel lifecycle scope is tied to the corresponding screen composable.
+* ViewModel - that manages and reduces the state of the corresponding screen. Additionally, it intercepts UI events and produces side-effects. The ViewModel lifecycle scope is tied to the corresponding screen composable.
 * Model - Repository classes that retrieve data. In a clean architecture context, one should use use-cases that tap into repositories.
 
 ![](https://i.imgur.com/UXwFbmv.png)
