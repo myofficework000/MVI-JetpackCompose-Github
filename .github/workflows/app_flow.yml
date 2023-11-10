@@ -1,30 +1,46 @@
-name: App Flow
+name: Android Build and Deployment Pipeline
 
 on:
-push:
-branches:
-- main
-pull_request:
-branches:
-- main
+  push:
+    branches: 
+    - 'master'
+
+  workflow_dispatch:
+    inputs:
+      app_id:
+        description: 'The application Id of the current build'
+        required: true
+      branch:
+        description: 'The branch from which we have to build'
+        required: true
 
 jobs:
-build:
-name: Build and Test
-runs-on: ubuntu-latest
+  build:
+    name: Setup Environment and build
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - name: Checkout the code to specific branch
         uses: actions/checkout@v2
-
-      - name: Set up JDK 11
+        with:
+          ref: ${{ github.event.inputs.branch }}
+            
+      - name: Set up JDK
         uses: actions/setup-java@v2
         with:
+          distribution: 'zulu'
           java-version: '11'
-
-      - name: Set up Android SDK
-        uses: actions/setup-android@v2
+                
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v2
+              
+      - uses: actions/cache@v2
         with:
-          sdk-version: '31'
-
-      - name: Build with Gradle
-        run: ./gradlew build
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+            
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
