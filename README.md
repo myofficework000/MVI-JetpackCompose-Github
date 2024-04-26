@@ -1,4 +1,4 @@
-# GithubCompose (Kotlin + Jetpack Compose + Navigation + MVI)
+# GithubCompose (Jetpack Compose + MVI)
 
 ![Language](https://img.shields.io/github/languages/top/cortinico/kotlin-android-template?color=blue&logo=kotlin)
 
