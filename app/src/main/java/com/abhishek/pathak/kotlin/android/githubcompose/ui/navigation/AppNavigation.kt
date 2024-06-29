@@ -32,7 +32,7 @@ fun AppNavigation() {
         ) { backStackEntry ->
             val userId = requireNotNull(backStackEntry.arguments?.getString(USER_ID)) { "User id is required as an argument" }
             ReposScreenDestination(
-                UserId = userId,
+                userId = userId,
                 navController = navController
             )
         }

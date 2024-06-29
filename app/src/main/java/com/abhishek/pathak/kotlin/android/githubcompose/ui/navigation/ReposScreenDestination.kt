@@ -9,8 +9,8 @@ import org.koin.androidx.compose.getViewModel
 import org.koin.core.parameter.parametersOf
 
 @Composable
-fun ReposScreenDestination(UserId: String, navController: NavController) {
-    val viewModel = getViewModel<ReposViewModel> { parametersOf(UserId) }
+fun ReposScreenDestination(userId: String, navController: NavController) {
+    val viewModel = getViewModel<ReposViewModel> { parametersOf(userId) }
     ReposScreen(
         state = viewModel.viewState.value,
         effectFlow = viewModel.effect,

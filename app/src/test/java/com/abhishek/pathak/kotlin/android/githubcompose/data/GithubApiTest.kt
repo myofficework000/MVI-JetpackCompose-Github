@@ -44,18 +44,18 @@ class GithubApiTest {
         val expected = listOf(
             User(
                 userId = "myofficework000",
-                avatarUrl = "https://avatars.githubusercontent.com/myofficework000",
+                avatarUrl = "https://avatars.githubusercontent.com/u/51234843?v=4",
                 htmlUrl = "https://github.com/myofficework000",
             ),
             User(
-                userId = "defunkt",
-                avatarUrl = "https://avatars.githubusercontent.com/u/2?v=4",
-                htmlUrl = "https://github.com/defunkt",
+                userId = "AGLPHO3NIX",
+                avatarUrl = "https://avatars.githubusercontent.com/u/51234844?v=4",
+                htmlUrl = "https://github.com/AGLPHO3NIX",
             ),
             User(
-                userId = "pjhyett",
-                avatarUrl = "https://avatars.githubusercontent.com/u/3?v=4",
-                htmlUrl = "https://github.com/pjhyett",
+                userId = "gulamyakkaspace",
+                avatarUrl = "https://avatars.githubusercontent.com/u/51234845?v=4",
+                htmlUrl = "https://github.com/gulamyakkaspace",
             ),
         )
 
@@ -65,7 +65,7 @@ class GithubApiTest {
 
         // Then
         assertEquals(expected, actual)
-        assertEquals("/users", request.path)
+        assertEquals("/users?since=51234842", request.path)
     }
 
     @Test

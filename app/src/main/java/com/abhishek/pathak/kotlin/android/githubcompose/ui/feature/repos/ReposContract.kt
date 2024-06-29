@@ -26,5 +26,4 @@ class ReposContract {
             object Back : Navigation()
         }
     }
-
 }

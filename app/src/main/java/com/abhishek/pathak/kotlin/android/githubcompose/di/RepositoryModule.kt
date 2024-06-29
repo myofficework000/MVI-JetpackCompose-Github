@@ -5,11 +5,9 @@ import com.abhishek.pathak.kotlin.android.githubcompose.data.GithubRepositoryImp
 import org.koin.dsl.module
 
 val repositoryModule = module {
-
     factory<GithubRepository> {
         GithubRepositoryImpl(
             githubApi = get()
         )
     }
-
 }

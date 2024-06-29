@@ -58,5 +58,4 @@ abstract class BaseViewModel<Event: ViewEvent, UiState: ViewState, Effect: ViewS
         val effectValue = builder()
         viewModelScope.launch { _effect.send(effectValue) }
     }
-
 }

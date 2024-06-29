@@ -10,7 +10,9 @@ class ReposViewModel(
     private val githubRepository: GithubRepository
 ) : BaseViewModel<ReposContract.Event, ReposContract.State, ReposContract.Effect>() {
 
-    init { getAll() }
+    init {
+        getAll()
+    }
 
     override fun setInitialState() = ReposContract.State(
         user = null,
@@ -25,6 +27,7 @@ class ReposViewModel(
             ReposContract.Event.BackButtonClicked -> {
                 setEffect { ReposContract.Effect.Navigation.Back }
             }
+
             ReposContract.Event.Retry -> getAll()
         }
     }
@@ -57,5 +60,4 @@ class ReposViewModel(
                 setState { copy(isError = true, isReposLoading = false) }
             }
     }
-
 }
