@@ -8,10 +8,12 @@ import okhttp3.OkHttpClient
 import okhttp3.mockwebserver.MockWebServer
 import org.junit.After
 import org.junit.Test
+import retrofit2.HttpException
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 import kotlin.test.assertEquals
+import kotlin.test.assertFailsWith
 
 class GithubApiTest {
 
@@ -66,6 +68,18 @@ class GithubApiTest {
         // Then
         assertEquals(expected, actual)
         assertEquals("/users?since=51234842", request.path)
+    }
+
+    @Test
+    fun `Given 404 response when fetching users the throws HTTPException`(){
+        mockWebService.enqueueResponse(
+            fileName = "not-found.json",
+            code = 404
+        )
+        val exception = assertFailsWith<HttpException> {
+            runBlocking { api.getUsers() }
+        }
+        assertEquals(404,exception.code())
     }
 
     @Test
@@ -145,5 +159,19 @@ class GithubApiTest {
         // Then
         assertEquals(expected, actual)
         assertEquals("/users/$userId/repos", request.path)
+    }
+
+    @Test
+    fun `Given 404 When fetching user Then throws HttpException`(){
+        val userId = "nonexistentuser"
+        mockWebService.enqueueResponse(
+            fileName = "not-found.json",
+            code = 404
+        )
+        val exception = assertFailsWith<HttpException> {
+            runBlocking { api.getUser(userId) }
+        }
+        assertEquals(404,exception.code())
+        assertEquals("/users/$userId", mockWebService.takeRequest().path)
     }
 }
