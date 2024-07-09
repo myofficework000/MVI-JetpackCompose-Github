@@ -103,6 +103,7 @@ dependencies {
     testImplementation(Dependencies.Test.kotlinxCoroutinesTest)
     testImplementation(Dependencies.Test.koinTest)
     testImplementation(Dependencies.Test.okHttp3MockWebServer)
+    testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
 
     // Android Test
     androidTestImplementation(Dependencies.AndroidTest.junit)
