@@ -1,4 +1,4 @@
-# GithubCompose (Jetpack Compose + MVI + unit testing )
+# GithubCompose (Jetpack Compose + MVI + Unit testing)
 
 ![Language](https://img.shields.io/github/languages/top/cortinico/kotlin-android-template?color=blue&logo=kotlin)
 
