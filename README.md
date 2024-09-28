@@ -59,5 +59,8 @@ Every screen/flow defines its own contract class that states all corresponding c
 ## Connect with Us
 For more updates and contributions, connect with us on [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/myofficework/).
 
+ <a target="_blank" href="https://medium.com/@myofficework000/mvvm-to-mvi-a-guide-to-migrating-your-android-architecture-8d3cb5bb9f06"><img src="https://github.com/user-attachments/assets/8ed2f0b7-f668-4c93-a519-44d74c5677d7" alt="Medium"> 
+
+
 ## Give a Star!
 If you like this repository, please give it a star ⭐.
